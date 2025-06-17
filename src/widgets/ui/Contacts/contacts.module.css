@@ -1,0 +1,14 @@
+.contacts {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.list {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}

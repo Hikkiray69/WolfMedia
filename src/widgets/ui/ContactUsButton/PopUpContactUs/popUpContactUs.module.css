@@ -1,0 +1,92 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background-color: rgba(59, 35, 65, 1);
+    padding: 30px;
+    width: 400px;
+    height: 493px;
+    position: relative;
+}
+
+.popup input,
+.popup textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.popup h2 {
+    margin-top: 0;
+    margin-bottom: 23px;
+
+    font-family: ceraPro;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1;
+    text-align: center;
+}
+
+.submit {
+    background-color: rgba(242, 92, 58, 1);
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 17px 0px;
+
+    font-family: ceraPro;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.submit:hover {
+    background-color: rgba(255, 133, 45, 1);
+}
+.submit:active {
+    background-color: rgba(227, 67, 45, 1);
+}
+
+
+
+.popup .error {
+    color: red;
+    font-size: 12px;
+    margin-top: -8px;
+    margin-bottom: 10px;
+}
+
+.popupClose {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: transparent;
+    border: none;
+    font-size: 34px;
+    color: #000;
+    cursor: pointer;
+    z-index: 10;
+    line-height: 1;
+    width: 17px;
+    height: 17px;
+}
+
+.popupClose:hover {
+    color: #ff0000;
+}

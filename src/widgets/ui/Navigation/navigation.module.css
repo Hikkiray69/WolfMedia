@@ -1,0 +1,61 @@
+.content {
+    padding-left: 59px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 1919px) {
+        padding-left: 30px;
+        height: 70px;
+    }
+
+    @media (max-width: 899px) {
+        padding: 0px;
+    }
+}
+
+.navList {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    @media (max-width: 1919px) {
+        gap: 29px;
+    }
+}
+
+.navLink {
+    position: relative;
+    color: rgba(146, 115, 152, 1);
+    text-decoration: none;
+    font-family: ceraPro;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-wrap: nowrap;
+}
+
+.navLink:hover {
+    color: #fff; /* подсветка при наведении */
+}
+
+.navLink.active {
+    color: #fff;
+}
+
+.navLink.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -48px;
+    width: 100%;
+    height: 2px;
+    background: #ff5733;
+
+    @media (max-width: 1919px) {
+        bottom: -28px;
+    }
+}
