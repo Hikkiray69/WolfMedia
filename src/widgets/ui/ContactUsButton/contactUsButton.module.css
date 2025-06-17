@@ -7,11 +7,19 @@
     @media (max-width: 1919px) {
         padding: 8px 16px;
     }
+
+    @media (max-width: 599px) {
+        display: none;
+    }
 }
 
 .button:hover {
     background-color: white;
     color: rgba(47, 22, 52, 1);
+
+    & .mail {
+        filter: invert(0.8);
+    }
 }
 
 .text {

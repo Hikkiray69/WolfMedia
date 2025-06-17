@@ -7,6 +7,9 @@ import { ContactUsButton } from "../ui/ContactUsButton/contactUsButton";
 export function Header() {
     return (
         <header className={css.content}>
+            <div className={css.burgerMenu}>
+                <Image src="../svg/burgerMenuOpen.svg" alt="burgerMenu" width={24} height={16}/>
+            </div>
             <div className={css.navigation}>
                 <div className={css.logo}>
                     <Image src="../svg/wolfMediaWolf.svg" alt="wolfMediaWolf" width={70} height={70} priority className={css.logoSizeWolf} />
@@ -25,7 +28,7 @@ export function Header() {
                 </div>
                 <div className={css.contactUs}>
                     <div className={css.number}>
-                        <Image src="/svg/phoneCall.svg" alt="" width={24} height={24} />
+                        <Image src="/svg/phoneCall.svg" alt="" width={24} height={24} className={css.phoneLogo} />
                         <p className={css.phoneNumber}>+7 495 257 55 65</p>
                     </div>
                     <ContactUsButton />

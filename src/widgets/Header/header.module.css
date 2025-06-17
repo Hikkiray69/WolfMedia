@@ -10,6 +10,10 @@
     @media (max-width: 1919px) {
         height: 70px;
     }
+
+    @media (max-width: 599px) {
+        padding: 0px 15px;
+    }
 }
 
 .logo {
@@ -23,6 +27,10 @@
         gap: 6px;
     }
 
+    @media (max-width: 599px) {
+        gap: 5px;
+    }
+
     .logoSizeWolf {
         width: 70px;
         height: 70px;
@@ -30,6 +38,11 @@
         @media (max-width: 1919px) {
             width: 40px;
             height: 40px;
+        }
+
+        @media (max-width: 599px) {
+            width: 35px;
+            height: 35px;
         }
     }
 
@@ -44,6 +57,12 @@
 
         @media (max-width: 899px) {
             display: none;
+        }
+
+        @media (max-width: 599px) {
+            display: inline;
+            width: 104px;
+            height: 35px;
         }
     }
 }
@@ -63,10 +82,14 @@
 
 .navTablet {
     display: none;
-    
+
     @media (max-width: 899px) {
         display: flex;
         align-items: center;
+    }
+
+    @media (max-width: 599px) {
+        display: none;
     }
 }
 
@@ -74,10 +97,12 @@
     display: flex;
     flex-direction: row;
     gap: 50px;
+    align-items: center;
 
     .contactsDisplay {
         @media (max-width: 1919px) {
             display: none;
+
         }
     }
 }
@@ -98,6 +123,20 @@
     @media (max-width: 899px) {
         display: none;
     }
+
+    @media (max-width: 599px) {
+        display: flex;
+    }
+}
+
+.phoneLogo {
+    @media (max-width: 899px) {
+        display: none;
+    }
+
+    @media (max-width: 599px) {
+        display: inline;
+    }
 }
 
 .phoneNumber {
@@ -107,4 +146,17 @@
     line-height: 170%;
     letter-spacing: 0%;
     text-align: right;
+
+    @media (max-width: 899px) {
+        display: none;
+    }
+}
+
+.burgerMenu {
+    display: none;
+
+    @media (max-width: 599px) {
+        display: flex;
+        align-items: center;
+    }
 }

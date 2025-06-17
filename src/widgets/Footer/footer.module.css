@@ -1,10 +1,24 @@
 .container {
-    margin-top: auto;
-    width: auto;
     display: flex;
     height: 112px;
     background-color: rgba(59, 35, 65, 1);
-    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 1919px) {
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @media (max-width: 599px) {
+        padding-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 17px;
+
+        height: 138px;
+    }
 }
 
 .content {
@@ -13,15 +27,73 @@
     display: flex;
     justify-content: center;
     gap: 57px;
+    max-height: 112px;
+    width: 100%;
+
+    @media (max-width: 1919px) {
+        margin: 0;
+        justify-content: space-between;
+        max-width: none;
+    }
+
+    @media (max-width: 599px) {
+        height: 100%;
+        max-width: none;
+    }
 }
 
 .center {
     display: flex;
     align-items: center;
     gap: 57px;
+
+
 }
 
-.copyright {
+.copyrightDirection {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media (max-width: 599px) {
+        justify-content: space-between;
+    }
+}
+
+.navItemsDirection {
+    display: flex;
+    flex-direction: row;
+    height: 74px;
+    justify-content: space-between;
+
+    @media (max-width: 599px) {
+        height: auto;
+        justify-content: center;
+        gap: 25px;
+    }
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+
+    .logoSizeGrayWolf {
+        width: 51px;
+        height: 51px;
+    }
+
+    .logoSizeGrayName {
+        width: 150px;
+        height: 51px;
+
+        @media (max-width:899px) {
+            display: none;
+        }
+    }
+}
+
+.copyrightDesktop {
     color: rgba(146, 115, 152, 1);
 
     font-family: ceraPro;
@@ -33,6 +105,35 @@
     vertical-align: middle;
 
     width: 471px;
+
+    @media (max-width: 1919px) {
+        display: none;
+    }
+}
+
+.copyrightTablet {
+    color: rgba(146, 115, 152, 1);
+
+    font-family: ceraPro;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+
+    display: none;
+    height: 28px;
+    
+    @media (max-width:1919px) {
+        display: flex;
+        justify-content: center;
+    }
+
+    @media (max-width: 599px) {
+        height: 21px;
+        font-size: 11px;
+    }
 }
 
 .number {
@@ -44,6 +145,46 @@
     text-wrap: nowrap;
 }
 
+
+
+.contactsTablet {
+    display: none;
+
+    @media (max-width: 899px) {
+        display: flex;
+        align-items: center;
+    }
+
+    @media (max-width: 599px) {
+        display: none;
+    }
+}
+
+.contactsGap {
+    display: flex;
+    flex-direction: row;
+    gap: 49px;
+
+    @media (max-width: 599px) {
+        flex-direction: column-reverse;
+        gap: 15px;
+        justify-content: space-between;
+    }
+}
+
+.contactsDesktop {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 899px) {
+        display: none;
+    }
+
+    @media (max-width: 599px) {
+        display: flex;
+    }
+}
+
 .phoneNumber {
     font-family: ceraPro;
     font-weight: 500;
@@ -52,5 +193,3 @@
     letter-spacing: 0%;
     text-align: right;
 }
-
-/* 1170px */
