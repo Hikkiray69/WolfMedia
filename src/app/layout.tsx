@@ -72,7 +72,7 @@ export const ceraPro = localFont({
 
 
 export const metadata: Metadata = {
-    title: "WolfMedai",
+    title: "WolfMedia",
     description: "hihihaha",
 };
 
@@ -85,9 +85,8 @@ export default function RootLayout({
         <html lang="en" className={ceraPro.className}>
             <body>
                 <div className='wrapper'>
-                    {/* <Image src="/svg/Desktop.svg" alt="background" width={1920} height={1212} className='image'/> */}
                     <Header/>
-                    <main>{children}</main>
+                    {children}
                     <Footer/>
                 </div>
             </body>
