@@ -1,3 +1,7 @@
 .h1 {
     font-family: ceraPro;
 }
+
+.main {
+    flex: 1;
+}

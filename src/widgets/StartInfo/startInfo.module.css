@@ -138,7 +138,41 @@
             font-size: 50px;
             line-height: 140%;
 
-            height: 70px;
+            height: 70px;.container {
+                width: 100%;
+                margin-top: 120px;
+                display: flex;
+                justify-content: center;
+            
+                @media (max-width:1919px) {
+                    padding: 0px 20px;
+                }
+            
+                @media (max-width: 599px) {
+                    margin-top: 80px;
+                    padding: 0px 15px;
+                }
+            }
+            
+            .content {
+                display: flex;
+                flex-direction: column;
+                max-width: 1170px;
+            
+                @media (max-width: 1919px) {
+                    max-width: 860px;
+                    width: 100%;
+                }
+            
+                @media (max-width:899px) {
+                    max-width: 560px;
+                }
+            
+                @media (max-width: 599px) {
+                    max-width: 290px;
+                }
+            }
+            
 
             @media (max-width:1919px) {
                 height: 60px;

@@ -3,6 +3,7 @@ import "./globals.css";
 import localFont from 'next/font/local'
 import { Header } from "@/widgets/Header/header";
 import { Footer } from "@/widgets/Footer/footer";
+import { ReduxProvider } from '@/store';
 import Image from "next/image";
 
 export const ceraPro = localFont({
@@ -73,8 +74,25 @@ export const ceraPro = localFont({
 
 export const metadata: Metadata = {
     title: "WolfMedia",
-    description: "hihihaha",
+    description: "My work",
+    openGraph: {
+        title: "WolfMedia",
+        description: "My work",
+        url: "https://example.com!!!",
+        siteName: "WolfMedia",
+        images: [
+            {
+                url: "https://example.com!!!/svg/wolfMediaWolf.svg",
+                width: 1200,
+                height: 630,
+                alt: "WolfMedia Logo",
+            },
+        ],
+        locale: "ru_RU",
+        type: "website",
+    }
 };
+
 
 export default function RootLayout({
     children,
@@ -85,9 +103,11 @@ export default function RootLayout({
         <html lang="en" className={ceraPro.className}>
             <body>
                 <div className='wrapper'>
-                    <Header/>
-                    {children}
-                    <Footer/>
+                    <ReduxProvider>
+                        <Header />
+                        {children}
+                        <Footer />
+                    </ReduxProvider>
                 </div>
             </body>
         </html>

@@ -4,7 +4,7 @@ import { StartInfo } from "@/widgets/StartInfo/startInfo";
 
 export default function Home() {
     return (
-        <main>
+        <main className={css.main}>
             <StartInfo/>
         </main>
     );
