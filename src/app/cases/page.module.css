@@ -1,3 +1,14 @@
+.loading {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: ceraPro;
+    font-weight: 700;
+    font-size: 32px;
+}
+
 .container {
     padding: 40px;
     max-width: 1170px;
@@ -5,6 +16,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width:599px) {
+        padding: 15px;
+        width: 100%;
+    }
 }
 
 .title {
@@ -17,9 +33,9 @@
     display: flex;
     gap: 20px;
     align-items: flex-start;
-    
+
     @media (max-width: 899px) {
-        flex-direction: column;
+        display: none;
     }
 }
 
@@ -28,6 +44,18 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    &_Mobile {
+        display: none;
+
+
+        @media (max-width: 899px) {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+    }
 }
 
 .loadMoreButton {
@@ -37,15 +65,16 @@
     line-height: 100%;
     letter-spacing: 0;
     text-transform: uppercase;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
     width: 189px;
     min-height: 16px;
-    padding: 17px; 
+    padding: 17px 18px;
     text-align: center;
-    margin-top: 100px;
+    margin-block-start: 50px;
+    margin-block-end: 30px;
 
     color: white;
     background-color: rgba(242, 92, 58, 1);
@@ -58,4 +87,26 @@
     &:active {
         background-color: rgba(227, 67, 45, 1);
     }
+}
+
+.allCasesDownloaded {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-height: 16px;
+    padding: 17px 18px;
+    text-align: center;
+    margin-block-start: 50px;
+    margin-block-end: 30px;
+
+    border: 2px solid white;
+    background-color: rgb(56, 56, 56);
+    color: white;
 }

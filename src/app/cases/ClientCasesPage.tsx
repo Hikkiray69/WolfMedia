@@ -21,10 +21,13 @@ export default function ClientCasesPage() {
     const loadMore = () => {
         dispatch(fetchCases({ offset: allCases.length, limit: PAGE_SIZE }));
     };
-
+    
     const mid = Math.ceil(allCases.length / 2);
     const leftColumn = allCases.slice(0, mid);
     const rightColumn = allCases.slice(mid);
+
+    if (loading && allCases.length === 0) return <div className={css.loading}>Загрузка...</div>;
+    if (allCases.length === 0) return <div className={css.loading}>Кейсы не найдены</div>;
 
     return (
         <main className={css.container}>
@@ -44,7 +47,13 @@ export default function ClientCasesPage() {
                 </div>
             </div>
 
-            {loading && allCases.length > 0 && <p>Загрузка...</p>}
+            <div className={css.column_Mobile}>
+                {allCases.map((item) => (
+                    <CaseCard key={item.slug} item={item} />
+                ))}
+            </div>
+
+            {loading && allCases.length > 0 && <p className={css.loadMoreButton}>Загрузка...</p>}
 
             {!loading && hasMore && (
                 <button className={css.loadMoreButton} onClick={loadMore}>
@@ -52,7 +61,7 @@ export default function ClientCasesPage() {
                 </button>
             )}
 
-            {!hasMore && <p>Все кейсы загружены</p>}
+            {!hasMore && <p className={css.allCasesDownloaded}>Все кейсы загружены</p>}
         </main>
     );
 }

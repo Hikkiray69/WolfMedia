@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function StartInfo () {
     return (
-        <div className={css.container}>
+        <section className={css.container}>
             <div className={css.content}>
                 <h1 className={css.title}>Издательство новых медиа</h1>
                 <div className={css.statistics}>
@@ -20,6 +20,6 @@ export function StartInfo () {
                     <Image src="../svg/arrowDown.svg" alt="arrowDown" width={24} height={12}/>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

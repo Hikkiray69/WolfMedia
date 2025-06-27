@@ -1,17 +1,7 @@
 .container {
     width: 100%;
-    margin-top: 120px;
     display: flex;
     justify-content: center;
-
-    @media (max-width:1919px) {
-        padding: 0px 20px;
-    }
-
-    @media (max-width: 599px) {
-        margin-top: 80px;
-        padding: 0px 15px;
-    }
 }
 
 .content {

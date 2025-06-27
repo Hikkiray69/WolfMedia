@@ -4,6 +4,11 @@
     border-radius: 32px;
     background: rgba(59, 0, 59, 1);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+    transition: box-shadow 0.2s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 0 20px rgba(242, 92, 58, 1);
+    }
 }
 
 .caseTitle {
@@ -12,6 +17,17 @@
     font-size: 28px;
     
     margin-bottom: 10px;
+
+    @media (max-width:899px) {
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    @media (max-width:599px) {
+        font-weight: 700;
+        font-size: 20px;
+        max-width: 230px;
+    }
 }
 
 .tags {
@@ -31,4 +47,9 @@
     height: auto;
     display: block;
     border-radius: 20px;
+
+    @media (max-width: 599px) {
+        max-width: 599px;
+        width: 100%;
+    }
 }

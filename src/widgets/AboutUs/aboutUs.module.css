@@ -1,0 +1,154 @@
+.container {
+    width: 100%;
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 1919px) {
+        margin-top: 80px;
+    }
+}
+
+.connectTitleAndContent {
+    display: flex;
+    flex-direction: column;
+    max-width: 1170px;
+
+    @media (max-width: 1919px) {
+        max-width: 860px;
+        width: 100%;
+    }
+
+    @media (max-width:899px) {
+        max-width: 560px;
+    }
+
+    @media (max-width: 599px) {
+        max-width: 290px;
+    }
+}
+
+.label {
+    font-family: ceraPro;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+
+    @media (max-width:1919px) {
+        font-size: 34px;
+        margin-bottom: 66px;
+    }
+
+    @media (max-width:899px) {
+        margin-bottom: 20px;
+    }
+}
+
+.content {
+    display: flex;
+    gap: 10%;
+}
+
+.item {
+    max-width: 40%;
+
+    @media (max-width:870px) {
+        max-width: none;
+    }
+
+}
+
+.description {
+    margin-bottom: 35px;
+    height: 245px;
+    width: 573px;
+
+    @media (max-width: 1919px) {
+        width: 371px;
+        height: 338px;
+    }
+
+    @media (max-width: 899px) {
+        width: 560px;
+        height: 228px;
+    }
+
+    @media (max-width: 599px) {
+        width: 289px;
+        height: 321px;
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+}
+
+.roadMap {
+    @media (max-width:870px) {
+        display: none;
+    }
+}
+
+.roadMapMobile {
+    display: none;
+
+    @media (max-width:870px) {
+        display: block;
+        margin-bottom: 15px;
+    }
+}
+
+
+
+.desktopButton {
+
+    @media (max-width:425px) {
+        width: 100%;
+    }
+
+}
+
+.mobileButton {
+    display: none;
+
+    @media (max-width:600px) {
+        display: block;
+    }
+
+
+}
+
+.loadMoreButton {
+    font-family: ceraPro;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 155px;
+    height: 40px;
+    padding: 0px 13px;
+    text-align: center;
+
+    color: white;
+    background-color: rgba(242, 92, 58, 1);
+    border: none;
+
+    &:hover {
+        background-color: rgba(255, 133, 45, 1);
+    }
+
+    &:active {
+        background-color: rgba(227, 67, 45, 1);
+    }
+
+    @media (max-width:599px) {
+        width: 289px;
+        padding: 0px;
+    }
+}

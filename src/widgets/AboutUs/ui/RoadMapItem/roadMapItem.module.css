@@ -1,0 +1,11 @@
+.container {
+    position: relative;
+    display: inline-flex;
+    width: auto;
+
+    gap: 16px;
+}
+
+.point {
+    margin-top: 11px;
+}

@@ -39,7 +39,7 @@
 }
 
 .navLink:hover {
-    color: #fff; /* подсветка при наведении */
+    color: #fff;
 }
 
 .navLink.active {
